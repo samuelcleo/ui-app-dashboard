@@ -25,16 +25,7 @@ section {
     margin-right: auto;
 }
 
-.notification {
-    display: flex;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    margin-right: 20px;
-    border-radius: 25px;
-}
-
-.bell {
+#bell {
     width: 30px;
     height: 30px;
 }
@@ -197,7 +188,56 @@ header,
     60% {
         transform: scale(0.9);
     }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+#modal.open {
+    animation: grow 1s ease-out forwards;
+}
+
+/* 4. Write the CSS animation for notification modal flex container div with id 'modal' by applying a transform property to grow from scale(0) to scale(1) when classname 'open' is applied, and to contract when the classname 'close' is applied to the 'modal' div */
+.notification-div {
+    position: relative;
+    margin-right: 20px;
 }
 #modal {
-    animation: grow 1s ease-out backwards;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: scale(0);
+    transition: transform 0.3s ease-in-out;
+    z-index: 999;
+}
+  
+#notifications {
+    list-style: none;
+    padding: .25em;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+#modal.open #notifications {
+    max-height: 100%;
+}
+  
+.notification-card {
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 200px;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    background-color: white;
+    border: 1px solid black
 }

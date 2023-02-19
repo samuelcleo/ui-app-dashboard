@@ -1,7 +1,6 @@
-
-const trafficCanvas = document.getElementById('traffic-chart')
-const dailyCanvas = document.getElementById('daily-chart')
-const mobileCanvas = document.getElementById('mobile-chart')
+const trafficCanvas = document.getElementById('traffic-chart');
+const dailyCanvas = document.getElementById('daily-chart');
+const mobileCanvas = document.getElementById('mobile-chart');
 
 // Chart Data
 let trafficData = {
