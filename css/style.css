@@ -190,7 +190,6 @@ header,
         transform: scale(0.9);
     }
     100% {
-        opacity: 1;
         transform: scale(1);
     }
 }
@@ -213,6 +212,7 @@ header,
     display: flex;
     justify-content: center;
     align-items: center;
+    transform-origin: 100% 0%;
 }
   
 #notifications {
