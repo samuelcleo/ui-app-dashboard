@@ -3,9 +3,7 @@ const modal = document.getElementById('modal')
 const notifications = document.getElementById('notifications')
 
 // 2. Create a dismissible notification card as a new list item of the 'notifications' ul using javascript on loading of application
-const card = document.createElement('li')
-    card.className = 'notification-card'
-notifications.appendChild(card);
+
 
 // 5. Write the javascript to alter the classname of the notification div to alternate between the classnames 'open' and 'closed'. 
 
@@ -17,3 +15,5 @@ notificationBell.addEventListener('click', (e) => {
     }
     console.log(modal.className);
 });
+
+// Animate the notification closed

@@ -9,6 +9,7 @@
 
 li {
     list-style: none;
+    display: block;
 }
 
 /* ----- Base ----- */
@@ -30,7 +31,7 @@ section {
     height: 30px;
 }
 
-header img {
+.profile-image {
     width: 50px;
     height: 50px;
     border-radius: 25px;
@@ -194,7 +195,10 @@ header,
     }
 }
 #modal.open {
-    animation: grow 1s ease-out forwards;
+    animation: grow 1s ease-out backwards;
+}
+#modal.close {
+    display: none;
 }
 
 /* 4. Write the CSS animation for notification modal flex container div with id 'modal' by applying a transform property to grow from scale(0) to scale(1) when classname 'open' is applied, and to contract when the classname 'close' is applied to the 'modal' div */
@@ -209,35 +213,37 @@ header,
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    transform: scale(0);
-    transition: transform 0.3s ease-in-out;
-    z-index: 999;
 }
   
 #notifications {
     list-style: none;
-    padding: .25em;
+    padding: 0;
     margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-in-out;
 }
-#modal.open #notifications {
-    max-height: 100%;
-}
+
   
 .notification-card {
-    margin: 10px auto;
-    padding: 20px;
-    border-radius: 10px;
+    position: relative;
+    margin: 2px auto;
+    padding: 15px 20px;
+    border-radius: 8px;
     min-width: 200px;
     justify-content: space-between;
     align-items: center;
     width: 80%;
     background-color: white;
-    border: 1px solid black
+    border: 1px solid black;
+}
+.notification-card::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-image: url(../svg/cross.svg);
+    height: 20px;
+    width: 20px;
 }
