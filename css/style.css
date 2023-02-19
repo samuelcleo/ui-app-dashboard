@@ -239,12 +239,13 @@ header,
 }
 .notification-card::after {
     background-image: url("../svg/cross.svg");
+    background-size: 10px;
     content: "";
     display: block;
     position: absolute;
     top: 10px;
     right: 10px;
-    height: 20px;
-    width: 20px;
+    height: 10px;
+    width: 10px;
     z-index: 100;
 }
