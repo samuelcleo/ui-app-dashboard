@@ -1,6 +1,7 @@
 const trafficCanvas = document.getElementById('traffic-chart');
 const dailyCanvas = document.getElementById('daily-chart');
 const mobileCanvas = document.getElementById('mobile-chart');
+const trafficNav = document.querySelector('.traffic-nav');
 
 // Chart Data
 let trafficData = {
@@ -13,6 +14,17 @@ let trafficData = {
         }
     ]
 };
+function selectHandler(e) {
+  for (const el of e.target.parentNode.children) {
+    if (el.classList.contains('active')) {
+      el.classList.remove('active');
+    }
+  }
+  e.target.classList.add('active');
+}
+
+trafficNav.addEventListener('click', selectHandler);
+
 const dailyData = {
     labels: ["S", "M", "T", "W", "T", "F", "S"],
     datasets: [{

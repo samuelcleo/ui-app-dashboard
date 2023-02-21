@@ -42,9 +42,10 @@
     <!-- main content area -->
     <main>
         <div class="widget-header">
-            <h2 class="headline">Dashboard</h2>
-            <div class="tab"></div>
-            <div class="alert" id="alert" >
+            <div class="tab">
+                <h2 class="headline">Dashboard</h2>
+            </div>
+            <div id="alert">
             <!-- JS will insert alert here -->
             </div>
         </div>
@@ -81,35 +82,38 @@
             </section>
             <!-- END dashboard chart widgets -->
             
-            <section class="social-widgets">
-                <div class="facebook-stat">
-                    <div class="social-image"
-                        <!-- inline SVG not included for brevity -->
-                        <img src="svg/facebook.svg" alt="Facebook Social Image">
+            <section class="social-stats">
+                <h3>SOCIAL STATS</h3>
+                <div class="social-widgets">
+                    <div class="facebook-stat">
+                        <div class="social-image"
+                            <!-- inline SVG not included for brevity -->
+                            <img src="svg/facebook.svg" alt="Facebook Social Image">
+                        </div>
+                        <div class="social-text">
+                            <p>Facebook</p>
+                            <p>10,320</p>
+                        </div>
                     </div>
-                    <div class="social-text">
-                        <p>Facebook</p>
-                        <p>10,320</p>
+                    <div class="instagram-stat">
+                        <div class="social-image"
+                            <!-- inline SVG not included for brevity -->
+                            <img src="svg/instagram.svg" alt="Instagram Social Image">
+                        </div>
+                        <div class="social-text">
+                            <p>Instagram</p>
+                            <p>16,445</p>
+                        </div>
                     </div>
-                </div>
-                <div class="instagram-stat">
-                    <div class="social-image"
-                        <!-- inline SVG not included for brevity -->
-                        <img src="svg/instagram.svg" alt="Instagram Social Image">
-                    </div>
-                    <div class="social-text">
-                        <p>Instagram</p>
-                        <p>16,445</p>
-                    </div>
-                </div>
-                <div class="twitter-stat">
-                    <div class="social-image"
-                        <!-- inline SVG not included for brevity -->
-                        <img src="svg/twitter.svg" alt="Twitter Social Image">
-                    </div>
-                    <div class="social-text">
-                        <p>Twitter</p>
-                        <p>22,189</p>
+                    <div class="twitter-stat">
+                        <div class="social-image"
+                            <!-- inline SVG not included for brevity -->
+                            <img src="svg/twitter.svg" alt="Twitter Social Image">
+                        </div>
+                        <div class="social-text">
+                            <p>Twitter</p>
+                            <p>22,189</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -190,7 +194,7 @@
                 </ul>
             </section>
             <section class="message">
-                <h3>Message User</h3>
+                <h3>MESSAGE USER</h3>
                 <form class="field-container">
                     <input type="text" class="form-field" id="userField" placeholder="Search for user">
                     <textarea class="form-area" id= "messageField" placeholder="Message for user"></textarea>
@@ -198,7 +202,7 @@
                 </form>
             </section>
             <section class="settings">
-                <h3>Settings</h3>
+                <h3>SETTINGS</h3>
                 <!-- custom CSS toggle code-->
                 <!-- custom CSS toggle code-->
                 <div class="field-container">

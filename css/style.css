@@ -13,6 +13,14 @@ li {
 }
 
 /* ----- Base ----- */
+* {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h3 {
+    margin: 5px 0 15px;
+}
+
 section {
     padding: 10px;
     border: 1px solid #DEDEDE;
@@ -82,13 +90,91 @@ nav {
 .main-nav span {
     font-size: 16px;
 }
+/* ===================================== 
+   Dashboard Container Layout
+======================================== */
+.widget-header {
+    padding: 10px;
+}
+.tab {
+    display: flex;
+}
 
+.widget-container {
+    display: grid;
+}
+@media screen and (min-width: 768px) {
+    .widget-container {
+        grid-template-columns: 50%;
+    }
+}
+
+.alert-banner {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #7477BF;
+    color: #fff;
+    font-size: 16px;
+    margin: 10px auto;
+}
+
+.alert-banner-close:hover {
+    cursor: pointer;
+}
+
+/* ----- Charts Section ----- */
+.widget-container-full, 
+.widget-container-half {
+    width: 95%;
+}
+
+/* ----- Social Stats Section ----- */
+.social-widgets {
+    display: flex;
+    justify-content: space-around;
+}
+[class$="-stat"] {
+    padding: 30px 50px;
+}
+
+.social-image {
+    width: 40px;
+    height: 40px;
+}
 /* ===================================== 
    Section: Traffic Chart
 ======================================== */
 .traffic {
     border-top: none;
 }
+.traffic-nav {
+    display: flex;
+    justify-content: space-between;
+}
+.traffic-nav-link {
+    font-size: 20px;
+    margin: 4px 12px;
+    vertical-align: middle;
+    padding: 0 10px;
+    border: solid 1px black;
+    border-radius: 1em 1em;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+    .traffic-header {
+        display: flex;
+        margin: 0;
+    }
+    .traffic-nav {
+        margin-left: auto;
+        justify-content: flex-end;
+    }
+}
+
 
 /* ===================================== 
    Sections: Members and Activity Lists
@@ -126,26 +212,26 @@ input, select, textarea {
 }
 input, select, textarea, button {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border-radius: 10px;
     padding: 20px 20px;
+    border-radius: 10px;
     border: 2px solid #ccc;
     font-size: 16px;
     max-width: 100%;
     margin: 10px auto;
 }
 button {
-    background-color: #2196F3;
+    background-color: #7477BF;
     color: #fff;
-    border: none;
     cursor: pointer;
 }
+
 .button-disabled {        
-    background-color: #b0b0b0;
+    background-color: #999999;
 } 
   
 .form-field:focus, .form-area:focus {
     outline: none;
-    border-color: #2196F3;
+    border-color: #7477BF;
 }
 
 /* ===================================== 
@@ -191,8 +277,8 @@ header,
 @media screen and (min-width: 768px) {
     .grid-container {
         display: grid;
-        grid-template-columns: 100px 1fr;
-        grid-template-rows: minmax(100px, auto) 1fr;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: 1fr;
         grid-template-areas: 
             "header header"
             "nav main";
@@ -200,7 +286,7 @@ header,
     .widget-container {
         grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
     }
-    .traffic, .social-widgets {
+    .traffic, .social-stats {
         grid-column: 1 / 3;
     }
     .daily, .members, .message {
@@ -209,47 +295,6 @@ header,
     .mobile, .activity, .settings {
         grid-column: 2 / -1;
     }
-}
-
-/* ===================================== 
-   Dashboard Container Layout
-======================================== */
-.widget-header {
-    padding: 10px;
-}
-
-.widget-container {
-    display: grid;
-}
-@media screen and (min-width: 768px) {
-    .widget-container {
-        grid-template-columns: 50%;
-    }
-}
-
-.alert {
-    width: 100%;
-    height: 30px;
-}
-
-/* ----- Charts Section ----- */
-.widget-container-full, 
-.widget-container-half {
-    width: 95%;
-}
-
-/* ----- Social Stats Section ----- */
-.social-widgets {
-    display: flex;
-    justify-content: space-around;
-}
-[class$="-stat"] {
-    padding: 30px 50px;
-}
-
-.social-image {
-    width: 40px;
-    height: 40px;
 }
 
 /* ===================================== 
