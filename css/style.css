@@ -113,11 +113,11 @@ nav {
     display: flex;
     justify-content: space-between;
     max-width: 100%;
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
     background-color: #7477BF;
     color: #fff;
-    font-size: 16px;
+    font-size: .75rem;
     margin: 10px auto;
 }
 
@@ -125,25 +125,6 @@ nav {
     cursor: pointer;
 }
 
-/* ----- Charts Section ----- */
-.widget-container-full, 
-.widget-container-half {
-    width: 95%;
-}
-
-/* ----- Social Stats Section ----- */
-.social-widgets {
-    display: flex;
-    justify-content: space-around;
-}
-[class$="-stat"] {
-    padding: 30px 50px;
-}
-
-.social-image {
-    width: 40px;
-    height: 40px;
-}
 /* ===================================== 
    Section: Traffic Chart
 ======================================== */
@@ -164,6 +145,12 @@ nav {
     cursor: pointer;
 }
 
+/* ----- Charts Section ----- */
+.widget-container-full, 
+.widget-container-half {
+    width: 100%;
+}
+
 @media screen and (min-width: 768px) {
     .traffic-header {
         display: flex;
@@ -175,6 +162,22 @@ nav {
     }
 }
 
+/* ===================================== 
+   Sections: Social Stats
+======================================== */
+
+.social-widgets {
+    display: flex;
+    justify-content: space-around;
+}
+[class$="-stat"] {
+    padding: 30px 50px;
+}
+
+.social-image {
+    width: 40px;
+    height: 40px;
+}
 
 /* ===================================== 
    Sections: Members and Activity Lists
