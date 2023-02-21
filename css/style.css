@@ -15,12 +15,23 @@ li {
 /* ----- Base ----- */
 section {
     padding: 10px;
+    border: 1px solid #DEDEDE;
+}
+
+svg {
+    fill: #fff;
 }
 
 /* ===================================== 
    Main Header and Navigation Styles
 ======================================== */
 /* ----- Header ----- */
+header {
+    background-color: #7477BF;
+    color: #fff;
+    padding: 10px;
+}
+
 .app-name {
     font-size: 24px;
     margin-right: auto;
@@ -29,6 +40,9 @@ section {
 #bell {
     width: 30px;
     height: 30px;
+}
+#bell:hover {
+    cursor: pointer;
 }
 
 .profile-image {
@@ -50,7 +64,7 @@ section {
 
 /* ----- Navigation ----- */
 nav {
-    background-color: violet;
+    background-color: #4D4C72;
 }
 
 .main-nav {
@@ -70,6 +84,71 @@ nav {
 }
 
 /* ===================================== 
+   Section: Traffic Chart
+======================================== */
+.traffic {
+    border-top: none;
+}
+
+/* ===================================== 
+   Sections: Members and Activity Lists
+======================================== */
+.members-container li, 
+.updates-container li {
+    display: flex;
+    margin: 30px auto;
+}
+
+.members-container img {
+    margin-right: 20px;
+}
+.members-container p {
+    margin-left: auto;
+}
+
+/* ===================================== 
+   Sections: Form Fields
+======================================== */
+.field-container, .settings-button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.field-container > * {
+    flex-basis: 100%;
+}
+#save, #cancel {
+    flex-grow: 1;
+}
+
+input, select, textarea {
+    background-color: #eeeeee;
+}
+input, select, textarea, button {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 10px;
+    padding: 20px 20px;
+    border: 2px solid #ccc;
+    font-size: 16px;
+    max-width: 100%;
+    margin: 10px auto;
+}
+button {
+    background-color: #2196F3;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.button-disabled {        
+    background-color: #b0b0b0;
+} 
+  
+.form-field:focus, .form-area:focus {
+    outline: none;
+    border-color: #2196F3;
+}
+
+/* ===================================== 
    Flexbox Layouts
 ======================================== */
 /* ----- Header and Navigation ----- */
@@ -79,7 +158,6 @@ header,
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    padding: 10px;
 }
 @media screen and (min-width: 768px) {
     .main-nav {
