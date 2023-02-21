@@ -52,16 +52,16 @@
         <div class="widget-container">
             <!-- START dashboard chart widgets -->
             <section class="traffic">
-                <div class="traffic-header">
-                    <h3>TRAFFIC</h3>
-                    <ul class="traffic-nav">
-                        <li class="traffic-nav-link">Hourly</li>
-                        <li class="traffic-nav-link">Daily</li>
-                        <li class="traffic-nav-link active">Weekly</li>
-                        <li class="traffic-nav-link">Monthly</li>
-                    </ul>
-                </div>
                 <div class="widget-container-full">
+                    <div class="traffic-header">
+                        <h3>TRAFFIC</h3>
+                        <ul class="traffic-nav">
+                            <li class="traffic-nav-link">Hourly</li>
+                            <li class="traffic-nav-link">Daily</li>
+                            <li class="traffic-nav-link active">Weekly</li>
+                            <li class="traffic-nav-link">Monthly</li>
+                        </ul>
+                    </div>
                     <!-- element line graph will attach to -->
                     <canvas id="traffic-chart"></canvas>
                 </div>
@@ -201,22 +201,20 @@
                     <button class="button-primary" id="send" >SEND</button>
                 </form>
             </section>
-            <section class="settings">
+            <section class="settings field-container">
                 <h3>SETTINGS</h3>
                 <!-- custom CSS toggle code-->
                 <!-- custom CSS toggle code-->
-                <div class="field-container">
-                    <select class="form-field" id="timezone">
-                        <option disabled selected>Select a Timezone</option>
-                        <option>Eastern Standard Time (EST)</option>
-                        <option>Central Time (CT)</option>
-                        <option>Australian Eastern Standard Time (AEST)</option>
-                        <option>Coordinated Universal Time (UTC)</option>
-                    </select>
-                    <div class="settings-button" >
-                        <button class="button-primary" id="save">SAVE</button>
-                        <button class="button-disabled" id="cancel">CANCEL</button>
-                    </div>
+                <select class="form-field" id="timezone">
+                    <option disabled selected>Select a Timezone</option>
+                    <option>Eastern Standard Time (EST)</option>
+                    <option>Central Time (CT)</option>
+                    <option>Australian Eastern Standard Time (AEST)</option>
+                    <option>Coordinated Universal Time (UTC)</option>
+                </select>
+                <div class="settings-button">
+                    <button class="button-primary" id="save">SAVE</button>
+                    <button class="button-disabled" id="cancel">CANCEL</button>
                 </div>
             </section>
         </div>
