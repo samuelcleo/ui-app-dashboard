@@ -18,9 +18,15 @@ li {
 }
 
 section {
-    padding: 10px;
+    padding: 10px 10px 20px;
     border: 1px solid #CCCCCC;
 }
+
+section h3 {
+    padding-bottom: 20px;
+}
+
+
 
 /* ===================================== 
    Main Header and Navigation Styles
@@ -99,17 +105,19 @@ nav {
 /* ===================================== 
    Dashboard Container Layout
 ======================================== */
-.widget-header {
-    padding: 10px;
-}
 .tab {
+    margin: 0 0 15px;
     display: flex;
+    z-index: -1;
+    background-color: #F7F7F7;
+} .headline {
+    padding: 20px 15px;
+    background-color: #fff;
 }
 
 .widget-container {
     display: grid;
-}
-@media screen and (min-width: 768px) {
+} @media screen and (min-width: 768px) {
     .widget-container {
         grid-template-columns: 50%;
     }
@@ -119,12 +127,12 @@ nav {
     display: flex;
     justify-content: space-between;
     max-width: 100%;
+    margin: 10px;
     padding: 10px;
     border-radius: 10px;
     background-color: #7477BF;
     color: #fff;
     font-size: .75em;
-    margin: 10px auto;
 }
 
 .alert-banner-close:hover {
@@ -160,9 +168,7 @@ nav {
 .widget-container-half,
 .traffic-header {
     width: 98%;
-}
-
-@media screen and (min-width: 768px) {
+} @media screen and (min-width: 768px) {
     .traffic-header {
         display: flex;
     }
@@ -350,9 +356,7 @@ header,
             "header"
             "nav"
             "main";
-}
-
-@media screen and (min-width: 768px) {
+} @media screen and (min-width: 768px) {
     .grid-container {
         display: grid;
         grid-template-columns: auto 1fr;
