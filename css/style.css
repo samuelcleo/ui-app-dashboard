@@ -350,7 +350,7 @@ header,
 
 .grid-container {
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
             "header"
