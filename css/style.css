@@ -37,6 +37,18 @@ header {
     margin-right: auto;
 }
 
+@keyframes dingding {
+    0% { transform: rotate(0); }
+    15% { transform: rotate(8deg); }
+    30% { transform: rotate(-8deg); }
+    45% { transform: rotate(7deg); }
+    60% { transform: rotate(-7deg); }
+    75% { transform: rotate(4deg); }
+    85% { transform: rotate(-4deg); }
+    90% { transform: rotate(3deg); }
+    100% { transform: rotate(0); }
+}
+
 #bell {
     fill: #fff;
     width: 30px;
@@ -44,6 +56,7 @@ header {
 }
 #bell:hover {
     cursor: pointer;
+    animation: dingding .5s ease-out;
 }
 
 .profile-image {
