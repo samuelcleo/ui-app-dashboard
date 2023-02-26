@@ -35,10 +35,10 @@
     <!-- navigation -->
     <nav>
         <ul class="main-nav">
-            <li><a href="#"><img src="svg/home.svg" alt="Home"></a></li>
-            <li><a href="#"><img src="svg/bar-chart.svg" alt="Bar Chart"></a></li>
-            <li><a href="#"><img src="svg/members.svg" alt="Members"></a></li>
-            <li><a href="#"><img src="svg/settings.svg" alt="Settings"></a></li>
+            <li><a href="index.html"><img src="svg/home.svg" alt="Home"></a></li>
+            <li><a href="#nav-bar-chart"><img src="svg/bar-chart.svg" alt="Bar Chart"></a></li>
+            <li><a href="#nav-members"><img src="svg/members.svg" alt="Members"></a></li>
+            <li><a href="#nav-settings"><img src="svg/settings.svg" alt="Settings"></a></li>
         </ul>      
       </nav>
     <!-- main content area -->
@@ -68,7 +68,7 @@
                     <canvas id="traffic-chart"></canvas>
                 </div>
             </section>
-            <section class="daily">
+            <section class="daily" id="nav-bar-chart">
                 <h3>DAILY TRAFFIC</h3>
                 <div class="widget-container-half">
                     <!-- element bar graph will attach to -->
@@ -123,7 +123,7 @@
                     </div>
                 </div>
             </section>
-            <section class="members">
+            <section class="members" id="nav-members">
                 <h3>NEW MEMBERS</h3>
                 <!-- new members here -->
                 <ul class="members-container">
@@ -207,7 +207,7 @@
                     <button class="button-primary" id="send" >SEND</button>
                 </form>
             </section>
-            <section class="settings field-container">
+            <section class="settings field-container" id="nav-settings">
                 <h3>SETTINGS</h3>
                 <div class="toggle">
                     <label for="email">Send Email Notifications</label>
