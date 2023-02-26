@@ -17,6 +17,11 @@ notificationBell.addEventListener('click', (e) => {
 });
 
 // Animate the notification closed
+notifications.addEventListener('click', (event) => {
+	if (event.target.className === 'cross') {
+		event.target.parentNode.remove();
+	}
+})
 
 /// 
 /// Alert Banner
